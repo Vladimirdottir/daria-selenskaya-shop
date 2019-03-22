@@ -22,7 +22,7 @@ class ProductsActivity : ProductsView, AppCompatActivity() {
         setContentView(R.layout.activity_products)
 
         val productsUrl = intent.getStringExtra("productsUrl")
-        presenter = ProductsPresenter(productsUrl, this, context = this)
+        presenter = ProductsPresenter(productsUrl, this)
     }
 
     override fun onResume() {

@@ -13,7 +13,7 @@ class CategoriesActivity : CategoriesView, AppCompatActivity() {
     val categoriesListUrl =
         "https://gist.githubusercontent.com/Vladimirdottir/b0ebbf26f760b1eb8479bfd9237e144b/raw/d34eae857cc781fdc07209cd1fc4408303adec67/categories.json"
 
-    val presenter = CategoriesPresenter(categoriesListUrl, this, this@CategoriesActivity)
+    val presenter = CategoriesPresenter(categoriesListUrl, this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

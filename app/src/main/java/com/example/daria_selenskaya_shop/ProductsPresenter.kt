@@ -4,14 +4,15 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_products.*
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.list
+import org.kodein.di.direct
+import org.kodein.di.generic.instance
 
 class ProductsPresenter(
 
     val productsUrl: String,
-    val view: ProductsView,
-    context: Context
+    val view: ProductsView
 ) {
-    val requestMaker = getRequestMaker(context)
+    val requestMaker = di.direct.instance<RequestMaker>()
 
     fun onAppear() {
         requestMaker.make(

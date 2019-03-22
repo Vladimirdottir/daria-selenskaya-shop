@@ -3,14 +3,15 @@ package com.example.daria_selenskaya_shop
 import android.content.Context
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.list
+import org.kodein.di.direct
+import org.kodein.di.generic.instance
 
 class CategoriesPresenter(
     val categoriesListUrl: String,
-    val view: CategoriesView,
-    context: Context
+    val view: CategoriesView
 ){
 
-    val requestMaker = getRequestMaker(context)
+    val requestMaker = di.direct.instance<RequestMaker>()
 
     fun updateCategories(){
         requestMaker.make(categoriesListUrl,
