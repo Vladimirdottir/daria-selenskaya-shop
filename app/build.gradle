@@ -5,6 +5,12 @@ apply plugin: 'kotlinx-serialization'
 
 android {
     compileSdkVersion 28
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     defaultConfig {
         applicationId "com.example.daria_selenskaya_shop"
         minSdkVersion 26

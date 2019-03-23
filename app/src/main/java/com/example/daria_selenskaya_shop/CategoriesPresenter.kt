@@ -8,10 +8,10 @@ import org.kodein.di.generic.instance
 
 class CategoriesPresenter(
     val categoriesListUrl: String,
-    val view: CategoriesView
+    val view: CategoriesView,
+    context: Context
 ){
-
-    val requestMaker = di.direct.instance<RequestMaker>()
+    val requestMaker = getRequestMaker(context)
 
     fun updateCategories(){
         requestMaker.make(categoriesListUrl,

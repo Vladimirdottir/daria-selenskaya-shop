@@ -22,10 +22,12 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
     <Button
             android:id="@+id/refreshButton"
             android:visibility="gone"
-            android:text="Повторить"
+            android:background="@drawable/rounded_button"
+            android:text="Повторить загрузку"
+            android:padding="5dp"
             android:onClick="onRefresh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="70dp"/>
+            android:layout_marginTop="80dp"/>
 </FrameLayout>
